@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
 import { Smartphone, Apple } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Modern Overlay */}
@@ -23,22 +25,21 @@ export const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-extrabold text-foreground leading-[0.9] tracking-tight">
-                Train
-                <span className="block bg-gradient-hero bg-clip-text text-transparent">Smarter</span>
+                {t('hero.title1')}
+                <span className="block bg-gradient-hero bg-clip-text text-transparent">{t('hero.title2')}</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground/90 leading-relaxed max-w-lg font-light">
-                AI-powered training plans for cycling, running, and swimming. 
-                Sync with your Garmin device for seamless workout delivery.
+                {t('hero.subtitle')}
               </p>
             </div>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Get Started Free
+                {t('hero.cta.primary')}
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                Try TrainNow
+                {t('hero.cta.secondary')}
               </Button>
             </div>
             
@@ -46,11 +47,11 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-8">
               <Button variant="download" size="lg" className="gap-3">
                 <Apple className="w-5 h-5" />
-                App Store
+                {t('hero.download.ios')}
               </Button>
               <Button variant="download" size="lg" className="gap-3">
                 <Smartphone className="w-5 h-5" />
-                Google Play
+                {t('hero.download.android')}
               </Button>
             </div>
           </div>
@@ -68,8 +69,8 @@ export const Hero = () => {
                     <span className="text-3xl font-black text-primary-foreground">GP</span>
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-foreground">GPTrainer</h3>
-                    <p className="text-muted-foreground text-sm font-medium">Your AI Training Coach</p>
+                    <h3 className="text-2xl font-bold text-foreground">{t('hero.app.title')}</h3>
+                    <p className="text-muted-foreground text-sm font-medium">{t('hero.app.subtitle')}</p>
                   </div>
                 </div>
               </div>

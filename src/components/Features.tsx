@@ -1,24 +1,26 @@
 import { Calendar, Zap, Smartphone } from "lucide-react";
-
-const features = [
-  {
-    icon: Calendar,
-    title: "Smart Training Plans",
-    description: "AI-generated training plans that adapt to your schedule, fitness level, and goals across cycling, running, and swimming.",
-  },
-  {
-    icon: Zap,
-    title: "TrainNow",
-    description: "Need a workout right now? Our AI instantly generates the perfect session based on your current fitness and available time.",
-  },
-  {
-    icon: Smartphone,
-    title: "Garmin Integration",
-    description: "Seamlessly sync with your Garmin device. Send workouts directly to your watch and automatically track your progress.",
-  },
-];
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const Features = () => {
+  const { t } = useTranslation();
+  
+  const features = [
+    {
+      icon: Calendar,
+      title: t('features.smart.title'),
+      description: t('features.smart.description'),
+    },
+    {
+      icon: Zap,
+      title: t('features.trainnow.title'),
+      description: t('features.trainnow.description'),
+    },
+    {
+      icon: Smartphone,
+      title: t('features.garmin.title'),
+      description: t('features.garmin.description'),
+    },
+  ];
   return (
     <section className="py-32 bg-gradient-subtle relative overflow-hidden">
       {/* Background Elements */}
@@ -28,12 +30,11 @@ export const Features = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-8 mb-20">
           <h2 className="text-4xl lg:text-6xl font-extrabold text-foreground leading-tight tracking-tight">
-            Everything You Need to
-            <span className="block bg-gradient-hero bg-clip-text text-transparent">Train Better</span>
+            {t('features.title1')}
+            <span className="block bg-gradient-hero bg-clip-text text-transparent">{t('features.title2')}</span>
           </h2>
           <p className="text-xl lg:text-2xl text-muted-foreground/80 max-w-3xl mx-auto font-light leading-relaxed">
-            GPTrainer combines AI intelligence with real-world training expertise 
-            to deliver personalized workouts that evolve with you.
+            {t('features.subtitle')}
           </p>
         </div>
         

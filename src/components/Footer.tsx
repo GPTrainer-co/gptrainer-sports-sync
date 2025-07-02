@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Apple, Smartphone } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="relative bg-gradient-hero text-primary-foreground py-24 overflow-hidden">
       {/* Background Elements */}
@@ -15,21 +17,21 @@ export const Footer = () => {
         <div className="text-center space-y-12">
           <div className="space-y-6">
             <h2 className="text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-              Ready to Transform Your Training?
+              {t('footer.title')}
             </h2>
             <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto font-light leading-relaxed">
-              Join thousands of athletes who are already training smarter with GPTrainer.
+              {t('footer.subtitle')}
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button variant="outline" size="lg" className="gap-3 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary shadow-glass h-14 px-8 text-lg font-medium">
               <Apple className="w-6 h-6" />
-              Download for iOS
+              {t('footer.download.ios')}
             </Button>
             <Button variant="outline" size="lg" className="gap-3 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary shadow-glass h-14 px-8 text-lg font-medium">
               <Smartphone className="w-6 h-6" />
-              Download for Android
+              {t('footer.download.android')}
             </Button>
           </div>
           
@@ -37,7 +39,7 @@ export const Footer = () => {
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <div className="text-3xl font-black">GPTrainer</div>
               <div className="text-sm opacity-75 font-light">
-                © 2024 GPTrainer. All rights reserved.
+                {t('footer.copyright')}
               </div>
             </div>
           </div>

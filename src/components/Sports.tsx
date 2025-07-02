@@ -1,30 +1,26 @@
 import { Bike, PersonStanding, Waves } from "lucide-react";
-
-const sports = [
-  {
-    icon: Bike,
-    name: "Cycling",
-    description: "Power-based training plans for road, mountain, and indoor cycling with structured intervals and endurance builds.",
-    color: "text-blue-600",
-    bgColor: "bg-blue-50",
-  },
-  {
-    icon: PersonStanding,
-    name: "Running",
-    description: "Pace-based training from 5K to marathon distance with tempo runs, intervals, and recovery sessions.",
-    color: "text-green-600",
-    bgColor: "bg-green-50",
-  },
-  {
-    icon: Waves,
-    name: "Swimming",
-    description: "Structured pool and open water sessions focusing on technique, endurance, and race-specific training.",
-    color: "text-cyan-600",
-    bgColor: "bg-cyan-50",
-  },
-];
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const Sports = () => {
+  const { t } = useTranslation();
+  
+  const sports = [
+    {
+      icon: Bike,
+      name: t('sports.cycling.name'),
+      description: t('sports.cycling.description'),
+    },
+    {
+      icon: PersonStanding,
+      name: t('sports.running.name'),
+      description: t('sports.running.description'),
+    },
+    {
+      icon: Waves,
+      name: t('sports.swimming.name'),
+      description: t('sports.swimming.description'),
+    },
+  ];
   return (
     <section className="py-32 bg-background relative overflow-hidden">
       {/* Background Pattern */}
@@ -36,12 +32,11 @@ export const Sports = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-8 mb-20">
           <h2 className="text-4xl lg:text-6xl font-extrabold text-foreground leading-tight tracking-tight">
-            Train Across
-            <span className="block bg-gradient-hero bg-clip-text text-transparent">Multiple Sports</span>
+            {t('sports.title1')}
+            <span className="block bg-gradient-hero bg-clip-text text-transparent">{t('sports.title2')}</span>
           </h2>
           <p className="text-xl lg:text-2xl text-muted-foreground/80 max-w-3xl mx-auto font-light leading-relaxed">
-            Whether you're a triathlete or focused on a single discipline, 
-            GPTrainer has specialized training plans for your sport.
+            {t('sports.subtitle')}
           </p>
         </div>
         
