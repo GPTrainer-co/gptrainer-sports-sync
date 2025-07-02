@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: npm run build   # deja el artefacto en ./dist
 
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist       # carpeta a publicar
 
