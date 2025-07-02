@@ -3,33 +3,40 @@ import { Apple, Smartphone } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center space-y-8">
-          <div className="space-y-4">
-            <h2 className="text-3xl lg:text-4xl font-bold">
+    <footer className="relative bg-gradient-hero text-primary-foreground py-24 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-black/10"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="text-center space-y-12">
+          <div className="space-y-6">
+            <h2 className="text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight">
               Ready to Transform Your Training?
             </h2>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
+            <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto font-light leading-relaxed">
               Join thousands of athletes who are already training smarter with GPTrainer.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="gap-3 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <Apple className="w-5 h-5" />
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button variant="outline" size="lg" className="gap-3 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary shadow-glass h-14 px-8 text-lg font-medium">
+              <Apple className="w-6 h-6" />
               Download for iOS
             </Button>
-            <Button variant="outline" size="lg" className="gap-3 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <Smartphone className="w-5 h-5" />
+            <Button variant="outline" size="lg" className="gap-3 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary shadow-glass h-14 px-8 text-lg font-medium">
+              <Smartphone className="w-6 h-6" />
               Download for Android
             </Button>
           </div>
           
-          <div className="pt-8 border-t border-primary-foreground/20">
+          <div className="pt-12 border-t border-white/20">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-              <div className="text-2xl font-bold">GPTrainer</div>
-              <div className="text-sm opacity-75">
+              <div className="text-3xl font-black">GPTrainer</div>
+              <div className="text-sm opacity-75 font-light">
                 © 2024 GPTrainer. All rights reserved.
               </div>
             </div>

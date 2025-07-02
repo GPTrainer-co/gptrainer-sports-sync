@@ -125,11 +125,18 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-glass': 'var(--gradient-glass)'
 			},
 			boxShadow: {
+				'elegant': 'var(--shadow-elegant)',
 				'primary': 'var(--shadow-primary)',
-				'subtle': 'var(--shadow-subtle)'
+				'subtle': 'var(--shadow-subtle)',
+				'glass': 'var(--shadow-glass)'
+			},
+			backdropBlur: {
+				'glass': 'var(--blur-glass)'
 			}
 		}
 	},
